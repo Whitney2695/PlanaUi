@@ -1,0 +1,238 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('https://cdn.pixabay.com/photo/2016/11/23/00/43/audio-1851517_1280.jpg') no-repeat center center/cover;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  
+  
+  button:disabled {
+    background: #555;
+    cursor: not-allowed;
+  }
+  
+  p {
+    color: #fff;
+    margin-top: 20px;
+  }
+  
+  a {
+    color: #ff007f;
+    text-decoration: none;
+  }
+  
+  .error {
+    color: #ff5733;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  
+  .success-message {
+    color: #000;
+    background: #fff;
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 10px;
+  }
+
+  
+  .input-group {
+    margin-bottom: 20px;
+    
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group .error {
+    margin-top: 5px;
+    font-size: 18px;
+    color: red;
+  }
+  
+  .input-group a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .input-group a:hover {
+    color: #fff;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff007f;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  button:disabled {
+    background-color: #444;
+    cursor: not-allowed;
+  }
+  
+  .error-message, .success-message {
+    margin-top: 10px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  .success-message {
+    color: green;
+  }
+  
+  .links {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .links a {
+    color: grey;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .links a:hover {
+    color: #fff;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .input-with-icon {
+    position: relative;
+  }
+  
+  .input-with-icon input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ff007f;
+    border-radius: 25px;
+    background: transparent;
+  }
+  
+  .input-with-icon i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+  }
+  
+  .input-group .error {
+    margin-top: 5px;
+    font-size: 18px;
+    color: red;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: grey;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  button:disabled {
+    background-color: #444;
+    cursor: not-allowed;
+  }
+  
+  .error-message, .success-message {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    z-index: 1; 
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  .success-message {
+    color: green;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #000;
+  }
+  
+  .login-link a {
+    color: blueviolet;
+    text-decoration: underline;
+  }
+  
+  .home-button {
+    background-color: grey;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 90px;
+  }
+  
+  .home-button:hover {
+    background-color: #555;
+  }
+  

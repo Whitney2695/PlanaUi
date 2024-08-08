@@ -1,0 +1,52 @@
+<!-- <div class="form-container">
+  <img src="assets/logo.png" alt="Logo" class="logo" />
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <input formControlName="email" type="email" placeholder="Email" />
+    <div *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">
+      <small class="error">Valid email is required.</small>
+    </div>
+    <input formControlName="password" type="password" placeholder="Password" />
+    <div *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+      <small class="error">Password is required.</small>
+    </div>
+    <button type="submit" [disabled]="loginForm.invalid" class="btn-primary">Sign In</button>
+  </form>
+  <p>Don't have an account? <a routerLink="/register">Sign up</a></p>
+  <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+</div> -->
+
+<div class="form-container">
+  <img src="assets/event1.jpg" alt="Logo" class="logo">
+  <button class="home-button" routerLink="/land">Home</button>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+      <h2>Login</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input id="email" formControlName="email" type="email" placeholder="Enter your email">
+          <div class="error" *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched">
+            Email is required and must be a valid email.
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input id="password" formControlName="password" type="password" placeholder="Enter your password">
+          <div class="error" *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
+            Password is required.
+          </div>
+        </div>
+        <div class="input-group">
+          <span style="color: black; margin-left: 25px">Forgot password? </span>
+          <a routerLink="/reset" style="color: blueviolet; transition: color blue 0.3s ease; display: inline-block;">
+            Reset
+          </a>
+        </div>
+        <button type="submit" [disabled]="loginForm.invalid">Login</button>
+        <div class="links">
+          <span>Don't have an account? <a routerLink="/register">Register</a></span>
+        </div>
+      </form>
+
+</div>
+

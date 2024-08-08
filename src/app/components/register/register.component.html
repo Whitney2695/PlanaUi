@@ -1,0 +1,80 @@
+<!-- <div class="form-container">
+  <img src="assets/logo.png" alt="Logo" class="logo" />
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <input formControlName="fullName" type="text" placeholder="Full Name" />
+    <div *ngIf="registerForm.get('fullName').invalid && registerForm.get('fullName').touched">
+      <small class="error">Full name is required.</small>
+    </div>
+    <input formControlName="email" type="email" placeholder="Email" />
+    <div *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched">
+      <small class="error">Valid email is required.</small>
+    </div>
+    <input formControlName="password" type="password" placeholder="Password" />
+    <div *ngIf="registerForm.get('password').invalid && registerForm.get('password').touched">
+      <small class="error">Password is required.</small>
+    </div>
+    <button type="submit" [disabled]="registerForm.invalid" class="btn-primary">Sign Up</button>
+  </form>
+  <p>Already have an account? <a routerLink="/login">Sign in</a></p>
+  <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+</div> -->
+
+<div class="form-container">
+  <img src="assets/event1.jpg" alt="Logo" class="logo">
+  <button class="home-button" routerLink="/''">Home</button>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+        <h2>Register</h2>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <div class="input-with-icon">
+              <i class="fas fa-user"></i>
+              <input id="username" formControlName="username" type="text" placeholder="Enter your full names"/>
+            </div>
+            <div class="error" *ngIf="registerForm.controls['username'].invalid && registerForm.controls['username'].touched">
+              Username is required
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="email">Email</label>
+            <div class="input-with-icon">
+              <i class="fas fa-envelope"></i>
+              <input id="email" formControlName="email" type="email" placeholder="Enter your email">
+            </div>
+            <div class="error" *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched">
+              Valid email is required
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <div class="input-with-icon">
+              <i class="fas fa-lock"></i>
+              <input id="password" formControlName="password" type="password" placeholder="Enter your password" />
+            </div>
+            <div class="error" *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched">
+              Password is required
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="input-with-icon">
+              <i class="fas fa-lock"></i>
+              <input id="confirmPassword" formControlName="confirmPassword" type="password" placeholder="cornfirm password"/>
+            </div>
+            <div class="error" *ngIf="registerForm.controls['confirmPassword'].invalid && registerForm.controls['confirmPassword'].touched">
+              Confirm password is required
+            </div>
+          </div>
+
+          <button type="submit" [disabled]="registerForm.invalid">Register</button>
+        </form>
+        <p class="login-link">
+          Already have an account? <a routerLink="/login">Login</a>
+        </p>
+
+
+</div>
